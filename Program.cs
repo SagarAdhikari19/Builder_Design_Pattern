@@ -35,9 +35,13 @@ public class Phone
     }
 
     public override string ToString()
-    {
-        return $"Phone Details: OS={os}, Processor={processor}, ScreenSize={screenSize}, Battery={battery}, Camera={camera}";
-    }
+{
+    return "Phone Details: OS=" + os +
+           ", Processor=" + processor +
+           ", ScreenSize=" + screenSize +
+           ", Battery=" + battery +
+           ", Camera=" + camera;
+}
 }
 
 public class PhoneBuilder
@@ -79,7 +83,11 @@ public class PhoneBuilder
     }
 
     public Phone getPhone()
+    //this getPhone method is responsible for creating and returning  a new instance of Phone class with the specified configuration
     {
         return new Phone(os, processor, screenSize, battery, camera);
     }
 }
+
+// line number 84 : The return type is Phone, indicating that this method will create and return an object of type Phone.
+//
